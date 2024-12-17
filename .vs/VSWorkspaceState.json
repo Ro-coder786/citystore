@@ -2,8 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app",
-    "\\src\\app\\login"
+    "\\src\\components"
   ],
   "PreviewInSolutionExplorer": false
 }
