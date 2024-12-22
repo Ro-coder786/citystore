@@ -2,7 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\app",
+    "\\src\\app\\about",
+    "\\src\\app\\api\\mockData",
+    "\\src\\app\\api\\products",
+    "\\src\\app\\products",
     "\\src\\components"
   ],
+  "SelectedNode": "\\src\\app\\products\\pages.js",
   "PreviewInSolutionExplorer": false
 }
