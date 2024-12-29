@@ -3,12 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\about",
-    "\\src\\app\\api\\mockData",
+    "\\src\\app\\api",
     "\\src\\app\\api\\products",
-    "\\src\\app\\products",
-    "\\src\\components"
+    "\\src\\app\\api\\shops"
   ],
-  "SelectedNode": "\\src\\app\\products\\pages.js",
+  "SelectedNode": "\\src\\app\\api\\shops\\route.js",
   "PreviewInSolutionExplorer": false
 }
