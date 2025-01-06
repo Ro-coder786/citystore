@@ -16,7 +16,15 @@ export default function ProductList  () {
 
      async function fetchPosts() {
         let url = window.location.host;
-        const res = await fetch(`http://${url}/api/products`)
+        if(url.includes('localhost'))
+        {
+            url = "http://"+ url
+        }
+        else
+        {
+            url = "https://" + url
+        }
+        const res = await fetch(`${url}/api/products`)
         const data = await res.json()            
         setProducts(data[0].products)
         setloading(false);
