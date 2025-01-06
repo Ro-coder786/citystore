@@ -1,6 +1,5 @@
 ﻿import { MdAddShoppingCart } from "react-icons/md";
 import Image from "next/image";
-import { auth } from "@/firebaseConfig";
 
 export default function Product({
     title,image,price,discount
@@ -8,7 +7,6 @@ export default function Product({
     return (
         <div className="rounded-lg border border-gray-200 bg-white p-5 drop-shadow-md dark:border-gray-700 dark:bg-gray-800">
              <a href="#">
-                    {/* <img className="mx-auto w-full"  src={image != "" ? image : "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" } alt="title" /> */}
                     <Image className="" height={80} width={250}  src={image != "" ? image : "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png" } alt="title" />
             </a>
             <div className="pt-6">                       

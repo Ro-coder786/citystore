@@ -1,8 +1,11 @@
 'use client'
 import { useEffect, useState } from "react";
 import Product from "./Product";
-import DeliveryOptions from "./productComponent/DeliveryOptions";
 import Loader from "./Loader";
+// import { NextResponse } from 'next/server'
+// import { client } from '../utils/lib'
+
+
 
 
 export default function ProductList  () {
@@ -10,16 +13,17 @@ export default function ProductList  () {
     const [filterModal, setFilterModal] = useState(false);
     const [products, setProducts] = useState([]);
     const [loading, setloading] = useState(true);
+
+     async function fetchPosts() {
+        let url = window.location.host;
+        const res = await fetch(`http://${url}/api/products`)
+        const data = await res.json()            
+        setProducts(data[0].products)
+        setloading(false);
+    }
     useEffect(() => {
-       
-        async function fetchPosts() {
-            var url = process.env.NEXT_PUBLIC_API_URL;
-            const res = await fetch(`${url}/api/products`)
-            const data = await res.json()            
-            setProducts(data[0].products)
-            setloading(false);
-        }
-        fetchPosts()        
+        fetchPosts()    
+        console.log("my error" + window.location.host)  
     }, [])
     if (loading) return <Loader/>
     return <div className="light:bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12">
